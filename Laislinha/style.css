@@ -1,0 +1,82 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4; /* Cor de fundo */
+    position: relative;
+}
+
+#romantic-button {
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 25px;
+    border: none;
+    background-color: #ff5c8a; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra do botão */
+    transition: background-color 0.3s ease;
+}
+
+/* Estilos para o texto destacado */
+.highlighted1 {
+    color: red;
+    font-weight: bold;
+}
+/* Estilos para o texto destacado */
+.highlighted {
+    color: red;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#romantic-button:hover {
+    background-color: #ff3f6c; /* Cor de fundo do botão ao passar o mouse */
+}
+
+/* Estilos CSS para centralizar a imagem */
+.image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.image-wrapper img {
+    max-width: 60%;
+    max-height: 100%;
+}
+
+/* Restante do seu CSS aqui */
+
+
+p {
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Restante do seu CSS aqui */
+
+.falling-image {
+    position: fixed;
+    bottom: 0;
+    width: 50px; /* Largura da imagem */
+    animation: fall linear infinite;
+    height: 50px;
+    top: 100px;
+    opacity: 70%;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+

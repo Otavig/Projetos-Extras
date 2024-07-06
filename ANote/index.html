@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8">
+                <div class="card mt-5">
+                    <div class="card-header">
+                        <h5>Lista de Tarefas</h5>
+                        <div>
+                            <button class="btn" id="enviar">Novo</button>
+                            <button class="btn" id="remover">Excluir</button>
+                        </div>
+                    </div>
+                    <div class="card-body" id="detailsContainer">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <button type="button" class="btn-close" id="closeModal" aria-label="Fechar"></button>
+            <h4 id="modalTitle"></h4>
+            <input type="text" class="form-control mb-2" id="modalInput" placeholder="Digite o nome...">
+            <textarea class="form-control mb-2" id="modalDescription" rows="3" placeholder="Descrição..."></textarea>
+            <button class="btn btn-primary mt-2" id="modalSubmit">Enviar</button>
+            <div id="suggestions"></div>
+        </div>
+    </div>
+
+    <div id="cardDetail" class="card-detail"></div>
+
+    <script src="scripts/script.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>    
+</body>
+</html>
