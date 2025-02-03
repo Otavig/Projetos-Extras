@@ -1,0 +1,251 @@
+/* Reset de margens e preenchimentos, e box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral do corpo da página */
+body {
+    background-color: #000; /* Cor de fundo preta */
+    overflow: hidden; /* Impede rolagem */
+    font-family: Arial, sans-serif; /* Fonte padrão */
+    color: #fff; /* Cor do texto branca */
+    position: relative; /* Necessário para posicionar o texto do rodapé */
+}
+
+/* Menu */
+.menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altura total da viewport */
+    text-align: center;
+    flex-direction: column;
+}
+
+.menu {
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo preto semi-transparente */
+    padding: 30px;
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4); /* Sombra mais pronunciada */
+    display: flex;
+    flex-direction: column; /* Menu em coluna */
+    width: 80%;
+    max-width: 500px;
+    padding-top: 100px;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+.menu h1 {
+    margin-bottom: 30px;
+    transition: 3s;
+}
+
+.menu h2 {
+    margin-top: 30px;
+}
+
+.menu img {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    margin-bottom: 40px;
+    transition: 1s;
+}
+
+.menu img:hover {
+    transform: scale(1.1);
+}
+
+/* Estilo dos botões */
+button {
+    background-color: #000000; /* Cor de fundo preto */
+    border: 1px solid gray;
+    color: #fff; /* Cor do texto branca */
+    padding: 15px 25px;
+    font-size: 18px;
+    border-radius: 10px; /* Bordas arredondadas */
+    cursor: pointer;
+    max-width: 60%;
+    width: 100%;
+    margin: 10px 0; /* Margem vertical para espaçamento em coluna */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave para hover */
+}
+
+#back-menu {
+    background-color: rgb(255, 56, 56);
+    color: white;
+}
+
+.scores {
+    background-color: #ffda0b; /* Cor de fundo ao passar o mouse */
+    color: black;
+}
+
+.scores:hover {
+    transform: scale(1.05); /* Leve aumento no tamanho ao passar o mouse */
+    background-color: #ebebeb; /* Cor de fundo ao passar o mouse */
+}
+
+#back-menu:hover {
+    background-color: #777; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.05); /* Leve aumento no tamanho ao passar o mouse */
+}
+
+button:hover {
+    background-color: #777; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.05); /* Leve aumento no tamanho ao passar o mouse */
+}
+
+/* Estilo da lista de pontuações */
+ul {
+    list-style: none; /* Remove marcadores padrão */
+    padding: 0;
+    margin: 20px 0;
+}
+
+li {
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Tela de seleção de tempo */
+.time-selection {
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo preto semi-transparente */
+    padding: 30px;
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4); /* Sombra mais pronunciada */
+}
+
+.time-selection button {
+    margin: 10px;
+}
+
+.time-selection h1 {
+    margin-bottom: 30px;
+}
+
+/* Estilo da tela final do jogo */
+.final-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altura total da viewport */
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo preto semi-transparente */
+    padding: 30px;
+}
+
+/* Estilo do contêiner de informações do jogo */
+#info-jogo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+}
+
+#tempo, #pontuacao, #contador-erro {
+    margin-bottom: 15px;
+}
+
+.contador-tempo {
+    user-select: none;
+}
+
+/* Texto do rodapé */
+.footer-text {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+.footer-text:hover {
+    transform: translateX(-50%) scale(1.2); /* Aumenta o tamanho e mantém a centralização */
+}
+
+/* Estilo dos círculos */
+.circle_spawn {
+    position: absolute;
+    width: 120px; /* Tamanho dos círculos */
+    height: 120px; /* Tamanho dos círculos */
+    background-color: white; /* Cor branca com opacidade */
+    border-radius: 50%;
+    border: 2px solid #fff; /* Borda branca */
+    cursor: pointer;
+}
+
+/* Consultas de mídia para tornar o layout responsivo */
+@media (max-width: 768px) {
+    .menu {
+        width: 90%;
+        padding: 20px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .menu img {
+        height: 100px;
+        width: 100px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .final-screen {
+        padding: 20px;
+    }
+
+    .footer-text {
+        font-size: 14px;
+        bottom: 10px;
+    }
+
+    #info-jogo {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu {
+        width: 95%;
+        padding: 15px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .menu img {
+        height: 80px;
+        width: 80px;
+    }
+
+    button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .footer-text {
+        font-size: 12px;
+        bottom: 5px;
+    }
+
+    #info-jogo {
+        font-size: 16px;
+    }
+}
